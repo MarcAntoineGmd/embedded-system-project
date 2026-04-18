@@ -1,0 +1,7 @@
+dbt;
+trd;
+sgo 52;
+sgo 70;
+sgo 61;
+att 3;
+fin;
