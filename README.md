@@ -1,6 +1,6 @@
 # Autonomous Inspection Robot — INF1900 (École Polytechnique de Montréal)
 
-** Marc-Antoine Gaumond · Alexis Chapados · Alex Carpentier · Frédéric Labelle
+Marc-Antoine Gaumond · Alexis Chapados · Alex Carpentier · Frédéric Labelle
 
 A bare-metal C++ robot built for AVR that autonomously runs an inspection circuit, identifies objects and people across six rooms, and sends a live status report back to a PC — no operating system involved.
 
