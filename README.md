@@ -4,8 +4,6 @@
 
 A bare-metal C++ robot built for AVR that autonomously runs an inspection circuit, identifies objects and people across six rooms, and sends a live status report back to a PC — no operating system involved.
 
----
-
 ## Overview
 
 1. **Loads a mission** — a custom bytecode program is sent to the robot over UART, defining which direction to travel, where to park, and which sounds to play.
@@ -17,8 +15,6 @@ A bare-metal C++ robot built for AVR that autonomously runs an inspection circui
 4. **Docks itself** in one of four designated parking spaces, relying on timed movement sequences and wall-following adjustments.
 5. **Reports results live** — as each room is inspected, a corresponding data row is transmitted over UART right away, rather than waiting for the full run to finish.
 
----
-
 ## Engineering details
 
 - **Hardware:** ATmega324PA microcontroller running at 8 MHz, coded entirely in bare-metal C++ (AVR-GCC, no RTOS)
@@ -27,8 +23,6 @@ A bare-metal C++ robot built for AVR that autonomously runs an inspection circui
 - **Non-volatile memory:** mission parameters and inspection data are stored on an external 24LCxxx EEPROM chip over I2C/TWI, so nothing is lost if power drops
 - **Live UART output:** results stream out row-by-row as inspections complete, instead of batching everything until the end
 - **Custom driver library:** a dedicated static library (`libequipe7987.a`) keeps hardware drivers (motor, LED, UART, EEPROM, ADC, buzzer) cleanly separated from the application-level logic
-
----
 
 ## Tech stack
 
