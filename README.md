@@ -1,19 +1,19 @@
-# Autonomous Inspection Robot — INF1900 (Polytechnique Montreal)
+# Autonomous Inspection Robot : INF1900 (Polytechnique Montreal)
 
 Marc-Antoine Gaumond · Alexis Chapados · Alex Carpentier · Frédéric Labelle
 
-A bare-metal C++ robot built for AVR that autonomously runs an inspection circuit, identifies objects and people across six rooms, and sends a live status report back to a PC — no operating system involved.
+A bare-metal C++ robot built for AVR that autonomously runs an inspection circuit, identifies objects and people across six rooms, and sends a live status report back to a PC, no operating system involved.
 
 ## Overview
 
-1. **Loads a mission** — a custom bytecode program is sent to the robot over UART, defining which direction to travel, where to park, and which sounds to play.
-2. **Follows the track** — a 5-sensor IR array combined with wall-detection sensors lets the robot stay on the line, recognize corners, and enter rooms from either direction (clockwise or counterclockwise).
+1. **Loads a mission** : a custom bytecode program is sent to the robot over UART, defining which direction to travel, where to park, and which sounds to play.
+2. **Follows the track** : a 5-sensor IR array combined with wall-detection sensors lets the robot stay on the line, recognize corners, and enter rooms from either direction (clockwise or counterclockwise).
 3. **Performs inspections in six rooms:**
    - Hallways: identifies damaged sections of the floor by matching obstacle patterns
    - Storage areas: counts items using a forward-facing proximity sensor
    - Workrooms: detects people (represented by poles) through ADC threshold readings, sounding a distinct note for each one found
 4. **Docks itself** in one of four designated parking spaces, relying on timed movement sequences and wall-following adjustments.
-5. **Reports results live** — as each room is inspected, a corresponding data row is transmitted over UART right away, rather than waiting for the full run to finish.
+5. **Reports results live** : as each room is inspected, a corresponding data row is transmitted over UART right away, rather than waiting for the full run to finish.
 
 ## Engineering details
 
