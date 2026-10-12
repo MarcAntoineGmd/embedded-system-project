@@ -1,4 +1,4 @@
-# Autonomous Inspection Robot : INF1900
+# Autonomous Inspection Robot : Initial Project in Embedded Systems at Polytechnique Montreal
 
 Marc-Antoine Gaumond · Alexis Chapados · Alex Carpentier · Frédéric Labelle
 
